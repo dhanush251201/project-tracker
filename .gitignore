@@ -1,0 +1,11 @@
+# Your workspace — student notes and private thoughts. Never commit these.
+data/
+backups/
+
+node_modules/
+logs/
+.DS_Store
+*.log
+
+# Local tool settings
+.claude/settings.local.json

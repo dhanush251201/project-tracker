@@ -1,0 +1,26 @@
+{
+  "name": "ta-project-tracker",
+  "version": "1.0.0",
+  "description": "Local-first tracker for supervising capstone teams: meetings, notes, tasks, milestones and progress.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning bin/start.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch bin/start.js",
+    "test": "node --disable-warning=ExperimentalWarning --test \"test/*.test.js\"",
+    "seed": "node --disable-warning=ExperimentalWarning scripts/seed.js",
+    "backup": "node --disable-warning=ExperimentalWarning scripts/backup.js",
+    "reset": "node --disable-warning=ExperimentalWarning scripts/reset.js",
+    "pm2:start": "pm2 start ecosystem.config.cjs && pm2 save",
+    "pm2:stop": "pm2 stop ecosystem.config.cjs",
+    "pm2:restart": "pm2 restart ecosystem.config.cjs",
+    "pm2:delete": "pm2 delete ecosystem.config.cjs && pm2 save",
+    "pm2:status": "pm2 list --namespace project-tracker",
+    "pm2:logs": "pm2 logs project-tracker",
+    "pm2:dev": "pm2 start ecosystem.config.cjs --only project-tracker --watch"
+  },
+  "dependencies": {}
+}

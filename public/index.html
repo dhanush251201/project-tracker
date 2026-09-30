@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Tracker — capstone supervision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/css/theme.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>" />
+</head>
+<body>
+  <div class="app">
+    <div class="topbar">
+      <button class="iconbtn only-narrow" id="btn-menu" title="Menu" aria-expanded="false">☰</button>
+      <div class="brand">Project Tracker<small id="brand-sub">TA workspace</small></div>
+      <nav class="tabs" role="tablist" id="tabs"></nav>
+      <span class="spacer"></span>
+      <span class="ro-badge" id="local-badge" title="Every note, task and meeting lives in a SQLite file on this machine. Nothing is sent anywhere.">● on this device</span>
+      <button class="iconbtn" id="btn-theme" title="Theme">◐</button>
+    </div>
+
+    <div class="main" id="main">
+      <aside class="side" id="side"></aside>
+      <div class="content" id="content"><div class="empty">loading…</div></div>
+    </div>
+  </div>
+
+  <div id="drawer-root"></div>
+  <div class="toasts" id="toasts"></div>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
